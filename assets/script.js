@@ -13,7 +13,8 @@ synth = speechSynthesis;
 function randomQuote(){
     quoteBtn.classList.add("loading");
     quoteBtn.innerText = "loading Quote...";
-    fetch("http://api.quotable.io/random").then(response => response.json()).then(result => {
+    let url = 'http://api.quotable.io/random';
+        fetch(url).then(response => response.json()).then(result => {
         quoteText.innerText = result.content;
         authorName.innerText = result.author;
         quoteBtn.classList.remove("loading");
