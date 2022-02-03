@@ -1,0 +1,228 @@
+
+ /* <!-- =====  Random Quote Generator- CSS--223Lines  ===== --> */
+
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(120deg, #dfb4df, #55e7fc);
+}
+
+/* Quote Box */
+.wrapper{
+    width: 595px;
+    background: white;
+    border-radius: 25px;
+    padding: 25px 35px;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.wrapper:hover{
+     color: black;
+     cursor: pointer;
+     background: linear-gradient(0.25turn, #a0d2e8, #efc598);
+     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(35, 92, 92, 0.446) 0px 15px 12px;
+     animation-name: bounce;
+}
+
+/* Animation */
+@keyframes bounce {
+	0%, 100%, 20%, 50%, 80% {
+		/* -webkit-transform: translateY(80); */
+		-ms-transform:     translateY(80);
+		transform:         translateY(80)
+	}
+	40% {
+		/* -webkit-transform: translateY(-50px); */
+		-ms-transform:     translateX(-50px);
+		transform:         translateX(-50px)
+	}
+	60% {
+		/* -webkit-transform: translateY(-15px); */
+		-ms-transform:     translateY(-15px);
+		transform:         translateY(-15px)
+	}
+}
+
+.wrapper header{
+    font-family: 'Poppins',sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .content{
+    margin: 30px 0;
+}
+
+.content .quote-area{
+    display: flex;
+    justify-content: center;
+}
+
+.quote-area i{
+    font-size: 15px;
+}
+
+.quote-area i:first-child{
+    margin: 3px 7px 0 0;
+}
+
+.quote-area i:last-child{
+    display: flex;
+    /* align-items: flex-end; */
+    text-align: flex-end;
+    margin: 0 0 3px 7px ;
+}
+
+.quote-area .quote{
+    font-size: 20px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.content .author{
+    display: flex;
+    font-size: 16px;
+    font-style: italic;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.author span:first-child{
+    margin: -9px 5px 0 0;
+    font-family: monospace;
+}
+
+/* Footer CSS */
+.wrapper .buttons{
+    border-top: 1px solid rgb(118, 110, 199);
+}
+
+.buttons .features{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.features ul{
+    display: flex;
+}
+
+.features ul li{
+    list-style: none;
+    margin: 0 5px;
+    height: 48px;
+    width: 48px;
+    font-size: 22px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40%;
+    border: 2px solid rgb(184, 134, 232);
+    transition: all 0.3s ease;
+}
+
+.features ul li:hover{
+    transform: scale(1.05);
+    color: aliceblue;
+    border: 1px;
+    background: rgb(26, 25, 25);
+}
+
+.features button{
+     border: none;
+     font-size: 18px;
+     outline: none;
+     color: black;
+     cursor: pointer;
+     padding: 13px 18px;
+     border-radius: 30px;
+     background: rgb(198, 145, 247);
+}
+
+.features button:hover{
+    transform: scale(1.02);
+    color: whitesmoke;
+    background: rgb(33, 32, 32);
+}
+
+.features button i{
+    margin-left: 2px;
+    font-size: 16px;
+}
+
+ul .speech.active{
+    pointer-events: none;
+}
+
+.buttons .loading{
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+
+
+/* =======  Media Queries  ======= */
+
+@media screen and (max-width: 640px){
+    .wrapper{
+        width: 470px;
+    }
+  }
+
+@media screen and (max-width: 540px){
+    .wrapper{
+        width: 420px;
+    }
+    
+    .features ul li{
+        margin: 0 3px;
+        height: 38px;
+        width: 38px;
+        font-size: 18px;
+    }
+
+    .features button{
+        font-size: 15px;
+        padding: 9px 14px;
+   }
+
+   .features button i{
+       margin-top: 2px;
+      font-size: 14px;
+ }
+}
+
+@media screen and (max-width: 445px) {
+    .wrapper{
+        width: 370px;
+    }
+  }
+
+@media screen and (max-width: 390px) {
+    .wrapper{
+        width: 340px;
+    }
+
+    .features button{
+        font-size: 12px;
+        padding: 9px 11px;
+   }
+}
